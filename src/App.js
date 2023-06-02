@@ -1,9 +1,12 @@
 function App() {
   return (
     <div className="App min-vh-100 pb-5">
-      <span className="d-flex display-1 justify-content-center align-items-center vh-100">
-        Under construction!
-      </span>
+      <div className="d-flex flex-column justify-content-center align-items-center vh-100">
+        <i class="bi bi-cone-striped display-1 mb-5"></i>
+        <span className="display-1">
+          Under construction!
+        </span>
+      </div>
     </div>
   );
 }
