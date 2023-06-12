@@ -24,7 +24,7 @@
     ],
     "rules": {
       "import/no-anonymous-default-export": [
-        "never", {
+        "off", {
           "allowArray": true,
           "allowLiteral": true
         }
