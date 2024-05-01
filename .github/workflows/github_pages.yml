@@ -28,12 +28,12 @@ jobs:
 
     - name: Build CRA project
       run: |
-        npm install
-        npm run build
+        yarn install
+        yarn build
     
     - name: Rename build
       run: |
-        mv build _site
+        mv dist _site
 
     - name: Upload artifact
       id: artifact
