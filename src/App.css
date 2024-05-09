@@ -1,6 +1,0 @@
-.hero-backdrop {
-  background:
-    linear-gradient(34deg, #00FA67 0%, #26352e 20%, #212529 50%, #442f2c 80%, #FA1000 100%),
-    url(https://grainy-gradients.vercel.app/noise.svg);
-  background-size: 200% 200%;
-}
