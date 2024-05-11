@@ -12,12 +12,12 @@ Analytics.visited();
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 const Index = () => {
-  const [theme, setTheme] = useTheme();
+  const { actualTheme, theme, setTheme } = useTheme();
 
   return (
     <React.StrictMode>
       <Navbar themeSelect theme={theme} setTheme={setTheme} />
-      <App theme={theme} />
+      <App theme={actualTheme} />
       <Footer />
     </React.StrictMode>
   );

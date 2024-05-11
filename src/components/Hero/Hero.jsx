@@ -29,7 +29,7 @@ const Hero = ({ theme }) => {
         <div className="flex justify-center space-x-16">
           <CallToAction primary text="text-white" bg="bg-[#1300FA]" icon={linkedInIcon} label="LinkedIn" url="https://www.linkedin.com/in/giuliano-rosso-5b5808232/" />
           
-          <CallToAction text="text-gray-800" bg="bg-white" icon={githubIcon} label="Github" url="https://github.com/GrossoDev" />
+          <CallToAction text="text-gray-800" bg="bg-gray-200" icon={githubIcon} label="Github" url="https://github.com/GrossoDev" />
         </div>
       </div>
     </div>
