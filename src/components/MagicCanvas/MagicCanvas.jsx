@@ -1,15 +1,15 @@
 import { useRef, useEffect } from 'react';
+import useScreenSize from './useScreenSize';
 
 // eslint-disable-next-line react/prop-types
 const MagicCanvas = ({ zIndex = 0, color = "#ffffff30" }) => {
   const canvasRef = useRef(null);
+  const { width, height } = useScreenSize(canvasRef);
 
   useEffect(() => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext('2d');
 
-    const width = canvas.clientWidth;
-    const height = canvas.clientHeight;
     if (canvas.width != width || canvas.height != height) {
       canvas.width = width;
       canvas.height = height;
@@ -63,7 +63,7 @@ const MagicCanvas = ({ zIndex = 0, color = "#ffffff30" }) => {
     };
 
     animateRain();
-  }, [color]);
+  }, [color, width, height]);
 
   return (
     <canvas

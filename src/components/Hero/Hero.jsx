@@ -1,6 +1,5 @@
 import linkedInIcon from "../../assets/icons/icons8-linkedin-96.png"
-import githubIcon from "../../assets/icons/icons8-github-96.png"
-import useTheme from "../../grosso-bootreact/utils/useTheme"
+import githubIcon from "../../assets/icons/icons8-github-dark-96.png"
 import MagicCanvas from '../../components/MagicCanvas/MagicCanvas'
 import CallToAction from './ActionButton'
 
@@ -28,9 +27,9 @@ const Hero = ({ theme }) => {
         </div>
         
         <div className="flex justify-center space-x-16">
-          <CallToAction icon={linkedInIcon} label="LinkedIn" url="https://www.linkedin.com/in/giuliano-rosso-5b5808232/" />
+          <CallToAction primary color="[#1300FA]" icon={linkedInIcon} label="LinkedIn" url="https://www.linkedin.com/in/giuliano-rosso-5b5808232/" />
           
-          <CallToAction icon={githubIcon} label="Github" url="https://github.com/GrossoDev" />
+          <CallToAction color="gray-800" icon={githubIcon} label="Github" url="https://github.com/GrossoDev" />
         </div>
       </div>
     </div>
