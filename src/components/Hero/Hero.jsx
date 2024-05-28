@@ -9,12 +9,13 @@ const backdrop = {
   backgroundSize: "200% 200%"
 };
 
+// eslint-disable-next-line react/prop-types
 const Hero = ({ theme }) => {
   const dark = (theme == "dark");
   
   return (
     <div style={backdrop} className="relative w-screen h-[calc(100vh-60px)] lg:h-[calc(100vh-90px)] flex justify-center">
-      <MagicCanvas zIndex="10" color={dark ? "#ffffff30" : '#00000050'} />
+      <MagicCanvas zIndex="10" fpsLimit={120} color={dark ? "#ffffff30" : '#00000050'} />
         
       <div style={{ zIndex: 20 }} className={"flex flex-col justify-center gap-16 " + (dark ? "text-[#fffaca]" : "text-gray-800")}>
         <div>

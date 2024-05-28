@@ -2,7 +2,7 @@ import { useRef, useEffect } from 'react';
 import useScreenSize from './useScreenSize';
 
 // eslint-disable-next-line react/prop-types
-const MagicCanvas = ({ zIndex = 0, color = "#ffffff30" }) => {
+const MagicCanvas = ({ zIndex = 0, color = "#ffffff30", fpsLimit = 90 }) => {
   const canvasRef = useRef(null);
   const { width, height } = useScreenSize(canvasRef);
 
@@ -59,11 +59,12 @@ const MagicCanvas = ({ zIndex = 0, color = "#ffffff30" }) => {
         }
       });
 
-      requestAnimationFrame(animateRain);
     };
+    
+    const interval = setInterval(() => requestAnimationFrame(animateRain), 1_000 / fpsLimit);
 
-    animateRain();
-  }, [color, width, height]);
+    return () => clearInterval(interval);
+  }, [color, width, height, fpsLimit]);
 
   return (
     <canvas
