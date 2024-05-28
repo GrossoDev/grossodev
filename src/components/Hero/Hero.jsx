@@ -19,11 +19,11 @@ const Hero = ({ theme }) => {
         
       <div style={{ zIndex: 20 }} className={"flex flex-col justify-center gap-16 " + (dark ? "text-[#fffaca]" : "text-gray-800")}>
         <div>
-          <h1 className="lg:text-7xl font-bold text-center">
+          <h1 className="md:text-7xl font-bold text-center">
             Giuliano Rosso
           </h1>
-          <h3 className="font-light text-center">
-            Fullstack developer - Specialized in the <b className="font-semibold">ASP.Net</b>-<b className="font-semibold">Angular</b>-<b className="font-semibold">Azure</b> stack
+          <h3 className="font-light text-center p-4">
+            Fullstack developer - Specialized in the <b className="font-semibold">ASP.Net</b>&#8209;<b className="font-semibold">Angular</b>&#8209;<b className="font-semibold">Azure</b>&nbsp;stack
           </h3>
         </div>
         
