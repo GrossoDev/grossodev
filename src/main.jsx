@@ -5,20 +5,23 @@ import App from './App';
 import Navbar from './grosso-bootreact/components/Navbar';
 import Footer from './grosso-bootreact/components/Footer';
 import Analytics from './grosso-bootreact/utils/analytics'
-import useTheme from './grosso-bootreact/utils/useTheme';
+import ThemeContext from './grosso-bootreact/utils/ThemeContext';
+import useThemeContext from './grosso-bootreact/utils/useThemeContext';
 
 Analytics.visited();
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 const Index = () => {
-  const { actualTheme, theme, setTheme } = useTheme();
+  const themeContext = useThemeContext();
 
   return (
     <React.StrictMode>
-      <Navbar themeSelect theme={theme} setTheme={setTheme} />
-      <App theme={actualTheme} />
-      <Footer />
+      <ThemeContext.Provider value={ themeContext }>
+        <Navbar showThemeSelector />
+        <App />
+        <Footer />
+      </ThemeContext.Provider>
     </React.StrictMode>
   );
 };

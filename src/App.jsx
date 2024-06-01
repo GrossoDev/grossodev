@@ -1,10 +1,10 @@
 import './App.css'
 import Hero from './components/Hero/Hero';
 
-function App({ theme }) {
+function App() {
   return (
     <>
-      <Hero theme={theme} />
+      <Hero />
     </>
   )
 }
