@@ -14,7 +14,6 @@ const Hero = () => {
   return (
     <div className="relative w-screen min-h-[320px] h-[calc(100vh-60px)] lg:h-[calc(100vh-90px)] flex justify-center">
       <div className={styles.backdrop}></div>
-      <div className={styles.backdrop}></div>
       <div className={styles.backdropBlur}></div>
 
       <MagicCanvas zIndex="10" fpsLimit={120} color={dark ? "#ffffff30" : '#00000050'} />
