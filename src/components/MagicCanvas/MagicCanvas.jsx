@@ -19,7 +19,7 @@ const MagicCanvas = ({ zIndex = 0, color = "#ffffff30", fpsLimit = 90 }) => {
     const dropCount = 100; // Number of rain drops
     const dropLength = 10; // Length of a rain drop
     const dropWidth = 2; // Width of a rain drop
-    const speed = -0.2;
+    const speed = -0.1;
     const maxDepth = 2;
     const minDepth = 0.4;
 
@@ -50,7 +50,7 @@ const MagicCanvas = ({ zIndex = 0, color = "#ffffff30", fpsLimit = 90 }) => {
       // Draw each rain drop and update its position
       drops.forEach((drop) => {
         drawDrop(drop);
-        drop.y += speed * drop.z; // Increase y for falling effect
+        drop.y += speed / drop.z; // Increase y for falling effect
 
         // Reset drop position when it falls off the bottom
         if (drop.y < -20) {

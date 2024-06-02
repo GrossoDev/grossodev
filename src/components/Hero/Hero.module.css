@@ -1,0 +1,20 @@
+.backdrop {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(34deg, #00FA6750 0%, #00FA6720 20%, #21252900 50%, #FA100020 80%, #FA100050 100%);
+  background-size: 200% 200%;
+}
+
+.backdropBlur {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  backdrop-filter: blur(50px);
+}
