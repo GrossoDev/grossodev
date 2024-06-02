@@ -12,7 +12,7 @@ const Hero = () => {
   const dark = (actualTheme == "dark");
   
   return (
-    <div className="relative w-screen min-h-[320px] h-[calc(100vh-60px)] lg:h-[calc(100vh-90px)] flex justify-center">
+    <div className="relative min-h-[320px] h-[calc(100vh-60px)] lg:h-[calc(100vh-90px)] flex justify-center">
       <div className={styles.backdrop}></div>
       <div className={styles.backdropBlur}></div>
 
