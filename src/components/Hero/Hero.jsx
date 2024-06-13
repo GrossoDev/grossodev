@@ -13,7 +13,7 @@ const Hero = () => {
     <div className="relative min-h-[320px] h-[calc(100vh-60px)] lg:h-[calc(100vh-90px)] flex justify-center">
       <div style={{ zIndex: 20 }} className={"flex flex-col justify-center gap-16 " + (dark ? "text-[#fffaca]" : "text-gray-800")}>
         <div>
-          <h1 className="md:text-7xl font-bold text-center">
+          <h1 className="text-5xl md:text-7xl font-bold text-center">
             Giuliano Rosso
           </h1>
           <h3 className="font-light text-center p-4">
