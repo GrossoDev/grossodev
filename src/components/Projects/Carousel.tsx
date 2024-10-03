@@ -20,8 +20,8 @@ export function Carousel({ items = [] }: CarouselProps) {
     <div className="flex flex-col px-2 md:px-16">
       {
         items.map((item, i) => (
-          <>
-            <article key={i} className="flex flex-col lg:flex-row items-center gap-4 md:gap-0 sm:px-8 rounded">
+          <div key={i}>
+            <article className="flex flex-col lg:flex-row items-center gap-4 md:gap-0 sm:px-8 rounded">
               <div className="flex-shrink relative p-2 w-full lg:w-[300px] lg:min-w-[300px] h-fit rounded ring-1 ring-white/10">
                 <img className="w-full rounded object-contain" src={item.image} />
                 <img className="absolute w-16 bottom-4 right-4 object-contain shadow" src={item.icon} />
@@ -54,10 +54,10 @@ export function Carousel({ items = [] }: CarouselProps) {
 
             {
               (i + 1 < items.length)
-              ? <div className="mx-16 my-16 lg:my-8 ring-1 ring-white/5" />
+              ? <br className="leading-10" />
               : null
             }
-          </>
+          </div>
         ))
       }
     </div>
