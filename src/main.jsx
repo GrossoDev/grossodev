@@ -4,11 +4,8 @@ import './index.css';
 import App from './App';
 import Navbar from './grosso-bootreact/components/Navbar';
 import Footer from './grosso-bootreact/components/Footer';
-import Analytics from './grosso-bootreact/utils/analytics'
 import ThemeContext from './grosso-bootreact/utils/ThemeContext';
 import useThemeContext from './grosso-bootreact/utils/useThemeContext';
-
-Analytics.visited();
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
